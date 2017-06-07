@@ -1,5 +1,5 @@
-# Chapter 2, Section 1: Installing Kylo and NiFi 
+# Chapter 2, Section 1: Installing Kylo and NiFi
 
 ### Introduction
 
-This section covers the installation of Kylo and NiFI.
+This section covers the installation of Kylo and NiFI on a new server. 

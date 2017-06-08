@@ -33,4 +33,12 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - On the next screen we can set some more instance details such as subnet, network and monitoring. The most useful option for us on this screen is to enable protection against accidental termination. We don't need to change any other details at this point so hit next to add storage.
 
-- I recommend changing the default disk size to at least 25 GiB, but you might want to go a little higher, to say, 40 GiB or more if you actually plan to injest data sets on this machine.
+- I recommend changing the default disk size to at least 25 GiB, but you might want to go a little higher, to say, 40 GiB or more if you actually plan to ingest data sets on this machine.
+
+- You can either hit the next tab to add some metadata (called tags) for the instance or you can now hit review and launch.
+
+- The machine will now boot. However, we have not defined any security groups, so we cannot access it yet.
+
+# Defining Security Groups and HDP/Kylo ports.
+
+- Security Groups in AWS 

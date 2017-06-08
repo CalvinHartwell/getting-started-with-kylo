@@ -8,7 +8,7 @@ Ambari is an open source management platform for provisioning, managing, monitor
 
 As we are using only a single server this is a very simple process as everything will be on one machine. If we wanted to add more machines to our cluster, we just need to add additional servers which have the Ambari agent configured.
 
-### Installing Ambari
+### Installing Ambari Server
 
 First we need to setup the Ambari repository to install the Ambari server package. SSH back to your machine and run the following command:
 
@@ -16,8 +16,18 @@ First we need to setup the Ambari repository to install the Ambari server packag
   wget http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.1.0/ambari.repo -P /etc/yum.repos.d/
 ```
 
-Now lets install The Ambari-server:
+Now lets install The Ambari-server and the Ambari-agent:
 
 ```
-  yum install ambari-server
+  yum install ambari-server ambari-agent -y
 ```
+
+After Ambari is installed, we need to configure it, so we will run the command ambari-server setup to start the wizard:
+
+```
+  ambari-server setup
+```
+
+### Configure Ambari Agent
+
+### Install Hadoop Services 

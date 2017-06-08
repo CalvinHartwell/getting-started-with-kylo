@@ -1,5 +1,5 @@
 
-![Local Image](/images/kylo-logo-orange.png=200x)
+![Local Image](/images/kylo-logo-orange.png | width=200x)
 
 # Getting Started With Kylo
 

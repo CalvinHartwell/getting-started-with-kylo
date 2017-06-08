@@ -1,6 +1,6 @@
 # Initial Server Setup
 
-### Running Kylo
+## Running Kylo
 
 The easiest way to use Kylo is through the pre-built virtual appliance (sandbox) which can be downloaded on the Kylo.io website. The sandbox includes an installation of Horton Work's Hadoop platform (HDP) and Kylo on CentOS 7. This can be useful for testing, development and demonstration purposes but does not provide a production environment.
 
@@ -21,7 +21,7 @@ Note that the machine can be made to work with less resources but the recommenda
 
 * The use of a public IP address is dangerous as it exposes the machine to the whole of the web. If we open up the port to Ambari Depending on your VPC setup, you might not want to do this at all as it could expose your company's internal network to the internet (for example, if you're using AWS Direct Connect). Preferably the use of a VPN would be better: [Amazon VPN Connections](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpn-connections.html).
 
-## Provision the Machine
+### Provision the Machine
 
 - First log into AWS (aws.amazon.com), if you don't have an account, create one. Once in, go to Services and find EC2. Once inside EC2 Dashboard, go to Launch Instance.
 
@@ -37,7 +37,7 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - The machine will now boot. However, we have not defined any security groups, so we cannot access it yet.
 
-# Defining Security Groups for HDP and Kylo
+### Defining Security Groups for HDP and Kylo
 
 By default in AWS, all ports are blocked/closed to virtual machines. Security groups must be used to open up connectivity to virtual machines on a port-by-port basis, just like regular firewalls. You can either add all your required ports into a single security or split them into individual groups which can be combined together.
 
@@ -61,7 +61,7 @@ Virtual machines can use multiple security groups at once. For example, I may cr
 
 - When the groups are defined, go back to EC2, go to Instances and find your machine in the list. Highlight the machine, then go to Actions and then to Networking. From the Networking menu hit 'Change Security Groups' and select the newly created security group(s) you made for the above ports. Finally, hit assign security groups.
 
-# Initial Server Configuration
+### Initial Server Configuration
 
 Now our server is ready,  we will jump onto it using SSH (knowledge of SSH is already assumed). Using SSH, connect to your server (you may use putty on windows, in which case, you will have to convert your key format):
 

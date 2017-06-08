@@ -8,5 +8,8 @@
  * [Section 2.2: Installing Hadoop](chapter2/section2.md)
  * [Section 2.3: Installing Kylo](chapter2/section3.md)
 * [Chapter 3 - Basic Kylo](chapter3/README.md)
+ * [Section 3.1: Hello, Kylo](chapter3/section1.md)
 * [Chapter 4 - Basic NiFi](chapter4/README.md)
+* [Section 4.1: Hello, NiFi](chapter4/section1.md)
 * [Chapter 5 - Summary](chapter5/README.md)
+  * [Section 5.1: Summary](chapter5/section1.md)

@@ -1,4 +1,4 @@
-# Chapter 2, Section 1: Installing Kylo, NiFI and HDP
+# Installing Kylo, NiFI and HDP
 
 ### Running Kylo
 

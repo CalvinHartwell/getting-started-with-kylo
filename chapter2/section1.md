@@ -61,4 +61,33 @@ Virtual machines can use multiple security groups at once. For example, I may cr
 
 - When the groups are defined, go back to EC2, go to Instances and find your machine in the list. Highlight the machine, then go to Actions and then to Networking. From the Networking menu hit 'Change Security Groups' and select the newly created security group(s) you made for the above ports. Finally, hit assign security groups.
 
-# Initial Server Configuration 
+# Initial Server Configuration
+
+Now our server is ready,  we will jump onto it using SSH (knowledge of SSH is already assumed). Using SSH, connect to your server (you may use putty on windows, in which case, you will have to convert your key format):
+
+```
+  ssh -i private_key_from_aws.pem ec2-user@xx.xx.xx.xx
+```
+
+* Note the xx.xx.xx.xx should be replaced with your public ip address for the machine you just provisioned (this can be found by highlighting it in the GUI) and your private key should be the one you downloaded during provisioning.
+
+Accept the finger print and you should be in as ec2-user. This is the default user for RHEL images on AWS. Run the following command to become root:
+
+```
+  sudo su
+```
+
+Now we have root, we should update the machine.
+
+```
+  yum update -y
+```
+
+We will also change the hostname:
+
+```
+  hostnamectl set-hostname --static kylo.cat-lover-extreme.com &&
+  hostnamectl set-hostname kylo.cat-lover-extreme.com &&
+```
+
+This change in hostname can be verified using

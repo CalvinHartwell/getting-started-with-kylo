@@ -1,4 +1,4 @@
-# Installing Kylo, NiFI and HDP
+# Initial Server Setup
 
 ### Running Kylo
 

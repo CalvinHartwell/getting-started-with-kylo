@@ -12,4 +12,4 @@
 * [Chapter 4 - Basic NiFi](chapter4/README.md)
   * [Section 4.1: Hello, NiFi](chapter4/section1.md)
 * [Chapter 5 - Summary](chapter5/README.md)
-  * [Section 5.1: Summary](chapter5/section1.md)
+  * [Section 5.1: Summary and Further Steps](chapter5/section1.md)

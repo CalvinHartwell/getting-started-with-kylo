@@ -47,8 +47,12 @@ Virtual machines can use multiple security groups at once. For example, I may cr
 
 - You will need to create either a single security group or multiple groups. Give the new group a name and a description, the list of ports we need to open are below:
 
-| Service      | Port |
-|--------------|------|
-| SSH          | 443  |
-| Kylo-UI      |      |
-| Kylo-Service |      |
+| Service          | Port |
+|------------------|------|
+| SSH              | 443  |
+| Kylo-UI          | 8400 |
+| Ambari GUI       | 8080 |
+| Ambari Handshake | 8440 |
+| Ambari Heartbeat | 8441 |
+
+- There are additional Ambari and Kylo ports defined in the manuals which can be opened as required. 

@@ -25,6 +25,8 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - First log into AWS (aws.amazon.com), if you don't have an account, create one. Once in, go to Services and find EC2. Once inside EC2 Dashboard, go to Launch Instance.
 
+![Local Image](/images/aws-services.png)
+
 - Inside Launch Instance, select Red Hat Enterprise Linux 7.3 (specifically Red Hat Enterprise Linux 7.3 (HVM), SSD Volume Type - ami-9c363cf8). If you're reading this in the future, the version has most likely changed, so just pick the latest Red Hat Enterprise Linux (HVM) image.
 
 - On the next screen, select the instance type. I used t2.large, which has two vCPU and 8 GiB of memory. Using the t2.medium instance would also suffice.

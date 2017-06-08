@@ -1,1 +1,1 @@
-# Getting Started with Kylo - Summary - Chapter 5
+# Chapter 5: Summary

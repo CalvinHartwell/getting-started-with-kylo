@@ -1,1 +1,1 @@
-# Getting Started with Kylo - Basic Kylo - Chapter 3
+# Chapter 3: Basic Kylo

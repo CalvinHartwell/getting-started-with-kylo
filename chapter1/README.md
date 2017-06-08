@@ -1,1 +1,1 @@
-# Getting Started with Kylo - Introduction to Kylo and NiFi - Chapter 1
+# Chapter 1: Getting Started with Kylo

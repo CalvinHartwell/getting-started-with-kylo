@@ -1,1 +1,1 @@
-# Getting Started with Kylo - Installing Kylo and NiFi - Chapter 2
+# Chapter 2: Installing Kylo and NiFi 

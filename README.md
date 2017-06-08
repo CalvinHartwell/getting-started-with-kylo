@@ -17,6 +17,6 @@ The book also includes some basic AWS and Hadoop (HDP from Horton Works).
 
 Written by Calvin Hartwell
 
-Contact me @ [calvin@calvinhartwell.com](mailto:calvin@calvinhartwell.com) or [calvin.hartwell@thinkbiganalytics.com](mailto:calvin.hartwell@thinkbiganalytics.com)
+Email: [calvin@calvinhartwell.com](mailto:calvin@calvinhartwell.com) or [calvin.hartwell@thinkbiganalytics.com](mailto:calvin.hartwell@thinkbiganalytics.com)
 
 You can also contact me via the #kylo channel on irc.freenode.com

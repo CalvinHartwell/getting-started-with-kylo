@@ -30,4 +30,6 @@ After Ambari is installed, we need to configure it, so we will run the command a
 
 ### Configure Ambari Agent
 
-### Install Hadoop Services 
+
+
+### Install Hadoop Services

@@ -33,7 +33,7 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - I recommend changing the default disk size to at least 25 GiB, but you might want to go a little higher, to say, 40 GiB or more if you actually plan to ingest data sets on this machine.
 
-- You can either hit the next tab to add some metadata (called tags) for the instance or you can now hit review and launch.
+- You can either hit the next tab to add some metadata (called tags) for the instance or you can now hit review and launch. At some point AWS will ask you to create a key pair. Create a new key pair and download the private key.
 
 - The machine will now boot. However, we have not defined any security groups, so we cannot access it yet.
 
@@ -59,4 +59,6 @@ Virtual machines can use multiple security groups at once. For example, I may cr
 
 - There are additional Ambari and Kylo ports defined in the manuals which can be opened as required.
 
-# 
+- When the groups are defined, go back to EC2, go to Instances and find your machine in the list. Highlight the machine, then go to Actions and then to Networking. From the Networking menu hit 'Change Security Groups' and select the newly created security group(s) you made for the above ports. Finally, hit assign security groups.
+
+# Initial Server Configuration 

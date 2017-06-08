@@ -1,5 +1,5 @@
 
-![Local Image](/images/kylo-logo-orange.png)
+![Local Image](/images/kylo-logo-orange.png =200x)
 
 # Getting Started With Kylo
 
@@ -15,6 +15,6 @@ The book also includes some basic AWS and Hadoop (HDP from Horton Works).
 
 ## Author Contact Details
 
-Written by Calvin Hartwell. Contact via [calvin@calvinhartwell.com](mailto:calvin@calvinhartwell.com) or [calvin.hartwell@thinkbiganalytics.com](mailto:calvin.hartwell@thinkbiganalytics.com). 
+Written by Calvin Hartwell. Contact via [calvin@calvinhartwell.com](mailto:calvin@calvinhartwell.com) or [calvin.hartwell@thinkbiganalytics.com](mailto:calvin.hartwell@thinkbiganalytics.com).
 
 You can also contact me via the #kylo channel on irc.freenode.com

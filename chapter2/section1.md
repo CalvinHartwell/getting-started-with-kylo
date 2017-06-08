@@ -102,8 +102,18 @@ Red Hat AMI come with a subscription baked into the cost, which means you don't 
   yum-config-manager --enable rhui-REGION-rhel-server-optional
 ```
 
+Let's also install wget to make it simpler to download stuff. CURL can also be used, if preferred:
+
+```
+  yum install wget -y
+```
+
+* Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled. 
+
 Finally, we've just updated the server and it is quite likely the kernel has been updated, so we should reboot for it to take affect, so we run the command:
 
 ```
   reboot now
 ```
+
+** At some point yum will become obsolete. DNF should be used instead.

@@ -13,7 +13,7 @@ This section covers the installation of Kylo, NiFI and HDP on a new machine to f
 We will be using AWS to build this test setup. In theory, you can use a physical server, another cloud provider, or even Virtual Box/KVM/Xen/etc to build the machine as well. Here are the requirements for the machine:
 
 - At least 8 GB of RAM
-- At least 2 cores
+- At least 2 Cores (Physical or Virtual)
 - At least 25 Gigabytes of storage
 - One Network Interface with a public IP address attached*
 
@@ -116,4 +116,4 @@ Finally, we've just updated the server and it is quite likely the kernel has bee
   reboot now
 ```
 
-** At some point yum will become obsolete and DNF will replace it. At that point, you should replace the yum commands with DNF. 
+** At some point yum will become obsolete and DNF will replace it. At that point, you should replace the yum commands with DNF.

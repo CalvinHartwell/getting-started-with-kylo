@@ -23,9 +23,7 @@ Note that the machine can be made to work with less resources but the recommenda
 
 ## Provision the Machine
 
-- First log into AWS (aws.amazon.com), if you don't have an account, create one.
-
-- Once in, go to Services and find EC2. Once inside EC2 Dashboard, go to Launch Instance.
+- First log into AWS (aws.amazon.com), if you don't have an account, create one. Once in, go to Services and find EC2. Once inside EC2 Dashboard, go to Launch Instance.
 
 - Inside Launch Instance, select Red Hat Enterprise Linux 7.3 (specifically Red Hat Enterprise Linux 7.3 (HVM), SSD Volume Type - ami-9c363cf8). If you're reading this in the future, the version has most likely changed, so just pick the latest Red Hat Enterprise Linux (HVM) image.
 
@@ -39,6 +37,18 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - The machine will now boot. However, we have not defined any security groups, so we cannot access it yet.
 
-# Defining Security Groups and HDP/Kylo ports.
+# Defining Security Groups for HDP and Kylo
 
-- Security Groups in AWS 
+By default in AWS, all ports are blocked/closed to virtual machines. Security groups must be used to open up connectivity to virtual machines on a port-by-port basis, just like regular firewalls. You can either add all your required ports into a single security or split them into individual groups which can be combined together.
+
+Virtual machines can use multiple security groups at once. For example, I may create a group for ssh (which contains 443) and HTTP (which contains 80 and maybe 8443). If the machine is given the SSH group it will just have 443, but if the other is added, all three ports 443, 80 and 8443 will be opened up.
+
+- First log into AWS (aws.amazon.com), if you don't have an account, create one. Once in, go to Services and find EC2. Once inside EC2 Dashboard, go to Network and Security and then Security Groups.
+
+- You will need to create either a single security group or multiple groups. Give the new group a name and a description, the list of ports we need to open are below:
+
+| Service      | Port |
+|--------------|------|
+| SSH          | 443  |
+| Kylo-UI      |      |
+| Kylo-Service |      |

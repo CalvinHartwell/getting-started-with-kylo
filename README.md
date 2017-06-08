@@ -1,5 +1,5 @@
 
-![Local Image](/images/kylo-logo-orange.png){:height="36px" width="36px"}
+![Local Image](/images/kylo-logo-orange.png)
 
 # Getting Started With Kylo
 

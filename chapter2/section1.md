@@ -29,6 +29,8 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - Inside Launch Instance, select Red Hat Enterprise Linux 7.3 (specifically Red Hat Enterprise Linux 7.3 (HVM), SSD Volume Type - ami-9c363cf8). If you're reading this in the future, the version has most likely changed, so just pick the latest Red Hat Enterprise Linux (HVM) image.
 
+![Local Image](/images/ec2-instance-size.png)
+
 - On the next screen, select the instance type. I used t2.large, which has two vCPU and 8 GiB of memory. Using the t2.medium instance would also suffice.
 
 - On the next screen we can set some more instance details such as subnet, network and monitoring. The most useful option for us on this screen is to enable protection against accidental termination. We don't need to change any other details at this point so hit next to add storage.

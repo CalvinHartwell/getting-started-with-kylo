@@ -1,6 +1,7 @@
-# Getting Started With Kylo
 
-![Local Image](./getting-started-with-kylo/images/kylo-logo-orange.png)
+![Local Image](./images/kylo-logo-orange.png)
+
+# Getting Started With Kylo
 
 A free book which provides an introduction to Kylo and NiFi without going into as much detail as the Kylo manual.
 

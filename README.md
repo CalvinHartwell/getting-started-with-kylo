@@ -1,5 +1,5 @@
 
-![Local Image](/images/kylo-logo-orange.png =200x)
+![Local Image](/images/kylo-logo-orange.png=200x)
 
 # Getting Started With Kylo
 
@@ -11,7 +11,7 @@ The book also includes some basic AWS and Hadoop (HDP from Horton Works).
 
 ## Contributions, Typos, and Errata
 
-[The git repository for this book can be found here](https://github.com/CalvinHartwell/getting-started-with-kylo), please raise PR/issues for errors and updates. 
+[The git repository for this book can be found here](https://github.com/CalvinHartwell/getting-started-with-kylo), please raise PR/issues for errors and updates.
 
 ## Author Contact Details
 

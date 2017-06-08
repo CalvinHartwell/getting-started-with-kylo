@@ -55,4 +55,8 @@ Virtual machines can use multiple security groups at once. For example, I may cr
 | Ambari Handshake | 8440 |
 | Ambari Heartbeat | 8441 |
 
-- There are additional Ambari and Kylo ports defined in the manuals which can be opened as required. 
+- On the Create security group form, you will want to add new in-bound rules for each port, selecting the Type as Custom TCP. You can limit the Source to your own IP address OR set the source to any ip address. As previously mentioned, this is a security risk.
+
+- There are additional Ambari and Kylo ports defined in the manuals which can be opened as required.
+
+# 

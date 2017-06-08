@@ -108,7 +108,7 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
   yum install wget -y
 ```
 
-* Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled. 
+* Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
 
 Finally, we've just updated the server and it is quite likely the kernel has been updated, so we should reboot for it to take affect, so we run the command:
 
@@ -116,4 +116,4 @@ Finally, we've just updated the server and it is quite likely the kernel has bee
   reboot now
 ```
 
-** At some point yum will become obsolete. DNF should be used instead.
+** At some point yum will become obsolete and DNF will replace it. At that point, you should replace the yum commands with DNF. 

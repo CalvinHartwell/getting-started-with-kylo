@@ -41,6 +41,8 @@ Note that the machine can be made to work with less resources but the recommenda
 
 - I recommend changing the default disk size to at least 25 GiB, but you might want to go a little higher, to say, 40 GiB or more if you actually plan to ingest data sets on this machine.
 
+![Local Image](/images/ec2-add-storage.png)
+
 - You can either hit the next tab to add some metadata (called tags) for the instance or you can now hit review and launch. At some point AWS will ask you to create a key pair. Create a new key pair and download the private key.
 
 - The machine will now boot. However, we have not defined any security groups, so we cannot access it yet.
@@ -52,6 +54,8 @@ By default in AWS, all ports are blocked/closed to virtual machines. Security gr
 Virtual machines can use multiple security groups at once. For example, I may create a group for ssh (which contains 443) and HTTP (which contains 80 and maybe 8443). If the machine is given the SSH group it will just have 443, but if the other is added, all three ports 443, 80 and 8443 will be opened up.
 
 - First log into AWS (aws.amazon.com), if you don't have an account, create one. Once in, go to Services and find EC2. Once inside EC2 Dashboard, go to Network and Security and then Security Groups.
+
+![Local Image](/images/ec2-create-security-group.png)
 
 - You will need to create either a single security group or multiple groups. Give the new group a name and a description, the list of ports we need to open are below:
 
@@ -68,6 +72,8 @@ Virtual machines can use multiple security groups at once. For example, I may cr
 - There are additional Ambari and Kylo ports defined in the manuals which can be opened as required.
 
 - When the groups are defined, go back to EC2, go to Instances and find your machine in the list. Highlight the machine, then go to Actions and then to Networking. From the Networking menu hit 'Change Security Groups' and select the newly created security group(s) you made for the above ports. Finally, hit assign security groups.
+
+![Local Image](/images/ec2-change-security-groups.png)
 
 ### Initial Server Configuration
 

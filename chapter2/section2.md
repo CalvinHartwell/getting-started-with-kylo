@@ -70,3 +70,5 @@ Now the agent and server are configured and running, we can proceed with the ins
    username: admin
    password: admin
 ```
+
+* It is highly recommended you change your ambari password as soon as possible. 

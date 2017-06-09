@@ -31,4 +31,9 @@ Next, clone the Kylo repository in some location we can build from (like root ho
 
 ```
 
-Once the repo is closed we need to install and configure maven. 
+Once the repo is closed we need to install and configure maven. Thankfully for us, Red Hat provides a supported maven package in the optional repository, so lets install it:
+
+```
+  # On CentOS, this might be available in EPEL, run yum install epel-release -y first
+  yum install -y maven
+```

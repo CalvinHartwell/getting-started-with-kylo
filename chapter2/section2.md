@@ -28,8 +28,27 @@ After Ambari is installed, we need to configure it, so we will run the command a
   ambari-server setup
 ```
 
+This in execute the ambari-server setup wizard. My answers to the wizard were yes (disable Selinux temporarily), :
+
+![Local Image](/images/ambari-server-setup-complete.png)
+
 ### Configure Ambari Agent
 
+Once the Ambari agent RPM has been installed, the Ambari agent needs to be configured to point to the Ambari server. Edit the configuration file /etc/ambari-agent/conf/ambari-agent.ini and change the server hostname and port to match
 
+```
+[server]
+hostname=localhost
+url_port=8440
+secured_url_port=8441
+connect_retry_delay=10
+max_reconnect_retry_delay=30
+```
+
+If your Ambari server is running on another machine (I.E your Kylo machine is an edge node), you will need to modify the hostname here or maybe your port if you changed it. Lets start the Ambari agent and enable it so it becomes active on boot:
+
+```
+
+```
 
 ### Install Hadoop Services

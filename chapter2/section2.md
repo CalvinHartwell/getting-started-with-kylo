@@ -62,3 +62,5 @@ If your Ambari server is running on another machine (I.E your Kylo machine is an
 ```
 
 ### Install Hadoop Services
+
+Now the agent and server are configured and running, we can proceed with the installation of HDP. 

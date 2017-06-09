@@ -28,9 +28,19 @@ After Ambari is installed, we need to configure it, so we will run the command a
   ambari-server setup
 ```
 
-This in execute the ambari-server setup wizard. My answers to the wizard were yes (disable Selinux temporarily), :
+This in execute the ambari-server setup wizard. My answers to the wizard were:
+  -  Yes, temporarily disable Selinux (though this is a security issue)
+  -  Yes, customize account for Ambari (when asked which user, specify ambari - do not run the service as root)
+  -  When asked to install the Oracle JDK, use the first option to install JDK 1.8
+  -  When asked to manipulate the database configuration I hit No (this will automaticall install and configure postgres)
 
 ![Local Image](/images/ambari-server-setup-complete.png)
+
+Finally, we start the Ambari server and enable the server to persist on reboots:
+
+```
+  systemctl enable ambari-server && systemctl start ambari-server
+```
 
 ### Configure Ambari Agent
 
@@ -48,7 +58,7 @@ max_reconnect_retry_delay=30
 If your Ambari server is running on another machine (I.E your Kylo machine is an edge node), you will need to modify the hostname here or maybe your port if you changed it. Lets start the Ambari agent and enable it so it becomes active on boot:
 
 ```
-
+ systemctl enable ambari-agent && systemctl start ambari-agent
 ```
 
 ### Install Hadoop Services

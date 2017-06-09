@@ -23,8 +23,12 @@ First we must install git and clone the Kylo repository:
   yum install -y git
 ```
 
-We clone the Kylo repository in some location we can build from:
+Next, clone the Kylo repository in some location we can build from (like root home or ec2-user home):
+
+```
+  # Clone the kylo repo
+  git clone https://github.com/Teradata/kylo.git
 
 ```
 
-```
+Once the repo is closed we need to install and configure maven. 

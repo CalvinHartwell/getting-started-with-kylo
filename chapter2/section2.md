@@ -73,6 +73,10 @@ Now the agent and server are configured and running, we can proceed with the ins
 
 &ast; It is highly recommended you change your ambari password as soon as possible, especially if your machine is directly exposed to the internet through a public IP address. This could expose the rest of your AWS machines or even your internal company's network if Ambari becomes compromised.
 
-When authenticated with Ambari, hit the Launch install Wizard button to begin the Hadoop installation process. This process will allow us to select which Hadoop services we want to run and on which machine in our cluster they will reside. As this is an all-in-one deployment, all the HDP services will be deployed onto the single server. 
+When authenticated with Ambari, hit the Launch install Wizard button to begin the Hadoop installation process. This process will allow us to select which Hadoop services we want to run and on which machine in our cluster they will reside. As this is an all-in-one deployment, all the HDP services will be deployed onto the single server. Give the cluster a name and hit next:
 
 ![Local Image](/images/hdp-kylo-cluster.png)
+
+On the Select Version page, chose the latest version. If you've got the repositories synchronized to a local server for an offline installation, hit the use local repository button. As this is a test platform, we will use the public repositories. From the list, remove everything but the redhat7 repository in the list:
+
+![Local Image](/images/hdp-repo-rhel7.PNG)

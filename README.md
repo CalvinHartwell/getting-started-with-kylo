@@ -9,6 +9,12 @@ This guide assumes you have a basic knowledge of *nix systems and are able to us
 
 The book also includes some basic AWS and Hadoop (HDP from Horton Works).
 
+The Kylo website can be found here: [https://kylo.io/](https://kylo.io/).
+
+The Kylo documentation can be found here: [https://kylo.io/docs.html](https://kylo.io/docs.html).
+
+The Kylo Source Code can be found here: [https://github.com/Teradata/kylo](https://github.com/Teradata/kylo). 
+
 ## Contributions, Typos, and Errata
 
 [The git repository for this book can be found here](https://github.com/CalvinHartwell/getting-started-with-kylo), please raise PR/issues for errors and updates.

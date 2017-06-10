@@ -8,7 +8,7 @@ In this section we cover the basic installation of Kylo using the Kylo RPM and t
 
 The Kylo RPM can be obtained from the Kylo.io website. Generally the latest RPM can be found through the release notes here: (https://kylo.readthedocs.io/en/latest/release-notes/ReleaseNotes.html#latest)[https://kylo.readthedocs.io/en/latest/release-notes/ReleaseNotes.html#latest].
 
-&ast; Hopefully in the future these packages will served through an official yum repository with signed GPG keys for added security.
+&ast; Note: Hopefully in the future these packages will served through an official yum repository with signed GPG keys for added security.
 
 Finally,
 

@@ -19,7 +19,7 @@ We will be using AWS to build this test setup. In theory, you can use a physical
 
 Note that the machine can be made to work with less resources but the recommendations here will work well.
 
-* The use of a public IP address is dangerous as it exposes the machine to the whole of the web. If we open up the port to Ambari Depending on your VPC setup, you might not want to do this at all as it could expose your company's internal network to the internet (for example, if you're using AWS Direct Connect). Preferably the use of a VPN would be better: [Amazon VPN Connections](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpn-connections.html).
+&ast; The use of a public IP address is dangerous as it exposes the machine to the whole of the web. If we open up the port to Ambari Depending on your VPC setup, you might not want to do this at all as it could expose your company's internal network to the internet (for example, if you're using AWS Direct Connect). Preferably the use of a VPN would be better: [Amazon VPN Connections](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpn-connections.html).
 
 ### Provision the Machine
 
@@ -83,7 +83,7 @@ Now our server is ready,  we will jump onto it using SSH (knowledge of SSH is al
   ssh -i private_key_from_aws.pem ec2-user@xx.xx.xx.xx
 ```
 
-* Note the xx.xx.xx.xx should be replaced with your public ip address for the machine you just provisioned (this can be found by highlighting it in the GUI) and your private key should be the one you downloaded during provisioning.
+&ast; Note: the xx.xx.xx.xx should be replaced with your public ip address for the machine you just provisioned (this can be found by highlighting it in the GUI) and your private key should be the one you downloaded during provisioning.
 
 Accept the finger print and you should be in as ec2-user. This is the default user for RHEL images on AWS. Run the following command to become root:
 
@@ -122,7 +122,7 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
   yum install wget -y
 ```
 
-* Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
+&ast; Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
 
 Finally, we've just updated the server and it is quite likely the kernel has been updated, so we should reboot for it to take affect, so we run the command:
 

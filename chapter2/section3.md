@@ -26,9 +26,9 @@ First we must install git and clone the Kylo repository:
 Next, clone the Kylo repository in some location we can build from (like root home or ec2-user home):
 
 ```
-  # Clone the kylo repo
+  # Clone the kylo repo in ec2-user home, root home or some other dir.
+  cd /home/ec2-user/
   git clone https://github.com/Teradata/kylo.git
-
 ```
 
 Once the repo is closed we need to install and configure maven. Thankfully for us, Red Hat provides a supported maven package in the optional repository, so lets install it:
@@ -37,3 +37,18 @@ Once the repo is closed we need to install and configure maven. Thankfully for u
   # On CentOS, this might be available in EPEL, run yum install epel-release -y first
   yum install -y maven
 ```
+
+Once installed, maven can be executed using the mvn command. Red Hat's package will most likely be older than the upstream maven release, which can be used instead.
+
+Next we will attempt to build the kylo project. This is pretty easy:
+
+```
+  # cd into kylo directory, export options for maven, run the build command
+  cd /home/ec2-user/kylo
+  export MAVEN_OPTS="-Xms2g -Xmx4g"
+  mvn clean install -DskipTests
+```
+
+Eventually you will end up with a message like this:
+
+![Local Image](/images/mvn-build.PNG)

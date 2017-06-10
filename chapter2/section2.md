@@ -71,6 +71,6 @@ Now the agent and server are configured and running, we can proceed with the ins
    password: admin
 ```
 
-* It is highly recommended you change your ambari password as soon as possible, especially if your machine is directly exposed to the internet through a public IP address. This could expose the rest of your AWS machines or even your internal company's network if Ambari becomes compromised.
+&ast; It is highly recommended you change your ambari password as soon as possible, especially if your machine is directly exposed to the internet through a public IP address. This could expose the rest of your AWS machines or even your internal company's network if Ambari becomes compromised.
 
 When authenticated with Ambari, hit the Launch install Wizard button to begin the Hadoop installation process. This process will allow us to select which Hadoop services we want to run and on which machine in our cluster they will reside. As this is an all-in-one deployment, all the HDP services will be deployed onto the single server.

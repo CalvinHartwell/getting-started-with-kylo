@@ -4,7 +4,7 @@ Kylo is distributed as a Virtual Appliance and in RPM format. There is also a .d
 
 In this section we cover the basic installation of Kylo using the Kylo RPM and then cover how to build the Kylo RPM from source. Building the Kylo RPM can be useful for development, debugging and testing Kylo.
 
-## Installing Kylo from RPM
+## Installing Kylo using the RPM
 
 The Kylo RPM can be obtained from the Kylo.io website. Generally the latest RPM can be found through the release notes here: (https://kylo.readthedocs.io/en/latest/release-notes/ReleaseNotes.html#latest)[https://kylo.readthedocs.io/en/latest/release-notes/ReleaseNotes.html#latest].
 
@@ -69,7 +69,7 @@ drwxr-xr-x. 8 root root 225 Jun  9 20:14 setup
 
 ```
 
-The install-rpm, install-tar and install-debian each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previous and can be found in this directory in the current version of the project:
+The install-rpm, install-tar and install-debian directories each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previous and can be found in this directory in the current version of the project:
 
 ```
 [root@kylo-release noarch]# ll /home/ec2-user/kylo/install/install-rpm/target/rpm/kylo/RPMS/noarch

@@ -52,3 +52,27 @@ Next we will attempt to build the kylo project. This is pretty easy:
 Eventually you will end up with a message like this:
 
 ![Local Image](/images/mvn-build.PNG)
+
+This process builds not only the RPM, but also the DEB package and the tar.gz package. In the current project, they can now be found in this directory:
+
+```
+[root@kylo-release install]# ll /home/ec2-user/kylo/install/
+total 4
+drwxr-xr-x. 2 root root  37 Jun  9 20:14 bin
+drwxr-xr-x. 3 root root  32 Jun  9 20:14 install-debian
+drwxr-xr-x. 3 root root  35 Jun  9 20:45 install-rpm
+drwxr-xr-x. 4 root root  46 Jun  9 20:42 install-tar
+drwxr-xr-x. 2 root root  29 Jun  9 20:14 license
+-rw-r--r--. 1 root root 713 Jun  9 20:14 pom.xml
+drwxr-xr-x. 2 root root  94 Jun  9 20:14 scripts
+drwxr-xr-x. 8 root root 225 Jun  9 20:14 setup
+
+```
+
+The install-rpm, install-tar and install-debian each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previous and can be found in this directory in the current version of the project:
+
+```
+[root@kylo-release noarch]# ll /home/ec2-user/kylo/install/install-rpm/target/rpm/kylo/RPMS/noarch
+total 574316
+-rw-r--r--. 1 root root 588097392 Jun  9 20:48 kylo-0.8.2-SNAPSHOT20170610003954.noarch.rpm
+```

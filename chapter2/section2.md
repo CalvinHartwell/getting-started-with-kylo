@@ -91,4 +91,16 @@ Ignore the warnings/message and you should get a page like this. If your machine
 
 Eventually you will see a screen like this, just hit next when possible to choose which services you want to install on the server:
 
+![Local Image](/images/hdp-ambari-registered.PNG)
+
+In theory you can install every available service, but I decided to opt for: HDFS, YARN + MapReduce2, Tez, Hive, HBase, Pig, Sqoop, Oozie, ZooKeeper, Flume, Ambari Infra, Ambari Metrics, Kafka, SmartSense, Spark, Spark2, Slider. Hit next when you've finished making your choices. Unfortunately we will not cover what every services does in Hadoop in the course of this book:
+
 ![Local Image](/images/hdp-ambari-services.PNG)
+
+Once you've selected your services, hit next. The next page allows you to assign which nodes will run the various services, such as the name node or the master nodes for various services. Each Hadoop service runs slightly differently and has a different pattern for deployment, but this really only matters if we are using more than one server. With this in mind, just hit the next button:
+
+![Local Image](/images/hdp-ambari-assign-masters.PNG)
+
+The next screen allows us to sign slaves for various services. As we are just running everything on one machine, hit next:
+
+![Local Image](/images/hdp-ambari-assign-masters.PNG)

@@ -124,6 +124,15 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
 
 &ast; Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
 
+As we're not using a DNS server, though we could use route 53, our own DNS servers (e.g setup BIND) or an existing organisation DNS servers, we will edit the hosts file for our server. Edit the /etc/hosts file and add localhost entries for both your public and private IP address. Also if you change your hostname to something other than the hostname provided by AWS, change add an entry for this as well. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com):
+
+```
+  # vi /etc/hosts
+  172.31.9.152 localhost
+  52.56.250.29 localhost
+  52.56.250.29 kylo.calvinh.thinkbiganalytics.com kylo
+```
+
 Finally, we've just updated the server and it is quite likely the kernel has been updated, so we should reboot for it to take affect, so we run the command:
 
 ```

@@ -81,6 +81,8 @@ On the Select Version page, chose the latest version. If you've got the reposito
 
 ![Local Image](/images/hdp-repo-rhel7.PNG)
 
-On the Install Options page, put 'localhost' into the list of target hosts. If you're building an entirely new cluster with several machines, you can put in the hostnames here, one per line. Note that if you're setting up multiple machines it would be a good idea to setup the SSH key for each of them. Technically, we could also setup an SSH key for the local machine, but that is pretty overkill. As we've already started and installed the Ambari Agent on this all-in-one machine, we can accept the manual registration option. Select the correct options as seen in the picture and hit next:
+On the Install Options page, put 'localhost' into the list of target hosts. If you're building an entirely new cluster with several machines, you can put in the hostnames here, one per line. Note that if you're setting up multiple machines it would be a good idea to setup the SSH key for each of them. Technically, we could also setup an SSH key for the local machine, but that is pretty overkill.
+
+As we've already started and installed the Ambari Agent on this all-in-one machine, we can accept the manual registration option. We just need to ensure the ambari-client is running and configured correctly before proceeding (see previous steps). Select the correct options as seen in the picture and hit next:
 
 ![Local Image](/images/hdp-ambari-hosts.PNG)

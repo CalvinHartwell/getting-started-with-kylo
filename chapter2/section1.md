@@ -124,12 +124,12 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
 
 &ast; Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
 
-As we're not using a DNS server, though we could use route 53, our own DNS servers (e.g setup BIND) or an existing organisation DNS servers, we will edit the hosts file for our server. Edit the /etc/hosts file and add localhost entries for both your public and private IP address. Also if you change your hostname to something other than the hostname provided by AWS, change add an entry for this as well. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com):
+&ast; If you change your hostname to something different to the one Amazon gives you when you provision your machine, you will most likely need to edit your host file unless you have DNS servers available. In theory you can use Route53, existing organisational DNS servers or set up your own using something like Bind. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com) and I just edited the /etc/hosts file to add an entry:
 
 ```
   # vi /etc/hosts
-  172.31.9.152 localhost
-  52.56.250.29 localhost
+  127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+  ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
   52.56.250.29 kylo.calvinh.thinkbiganalytics.com kylo
 ```
 

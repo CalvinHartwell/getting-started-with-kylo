@@ -77,6 +77,10 @@ When authenticated with Ambari, hit the Launch install Wizard button to begin th
 
 ![Local Image](/images/hdp-kylo-cluster.png)
 
-On the Select Version page, chose the latest version. If you've got the repositories synchronized to a local server for an offline installation, hit the use local repository button. As this is a test platform, we will use the public repositories. From the list, remove everything but the redhat7 repository in the list:
+On the Select Version page, chose the latest version. If you've got the repositories synchronized to a local server for an offline installation, hit the use local repository button. As this is a test platform, we will use the public repositories. From the list, remove everything but the redhat7 repository in the list and hit the next button:
 
 ![Local Image](/images/hdp-repo-rhel7.PNG)
+
+On the Install Options page, put 'localhost' into the list of target hosts. If you're building an entirely new cluster with several machines, you can put in the hostnames here, one per line. Note that if you're setting up multiple machines it would be a good idea to setup the SSH key for each of them. Technically, we could also setup an SSH key for the local machine, but that is pretty overkill. As we've already started and installed the Ambari Agent on this all-in-one machine, we can accept the manual registration option. Select the correct options as seen in the picture and hit next:
+
+![Local Image](/images/hdp-ambari-hosts.PNG)

@@ -103,8 +103,20 @@ Once you've selected your services, hit next. The next page allows you to assign
 
 The next screen allows us to sign slaves for various services. As we are just running everything on one machine, hit next:
 
+![Local Image](/images/hdp-assign-slaves.PNG)
+
+On the next screen, we customize services. The services which have the red box next to them mean there is some remaining configuration required to configure the service. This will vary depending on which services you selected, but for this installation, we need to fix Hive, Oozie, Ambari Metrics and SmartSense:
+
 ![Local Image](/images/hdp-ambari-assign-masters.PNG)
 
-On the next screen, we customize services. 
+At the bottom of the page you can hit the option 'show me properties with issues' which will automatically take you to the properties for each service which have outstanding problems. The other way to find the properties is to click each of the different individual services and click through to find the missing or troublesome properties:
 
-The next
+![Local Image](/images/ambari-server-services-settings-outstanding.PNG)
+
+Fill in each of the missing properties to resolve the final issues. These will mostly be database passwords and admin user passwords. Set them to something strong and make a note. Once you've done it, hit the deploy button to start installing the Hadoop services you selected:
+
+![Local Image](/images/hdp-ambari-services-deploy.PNG)
+
+Now the services will start to install on the machine, this will take a while, probably about 30-45 minutes.
+
+![Local Image](/images/ambari-hdp-installing-services.PNG)

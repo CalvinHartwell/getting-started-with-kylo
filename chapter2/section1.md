@@ -128,6 +128,7 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
 
 ```
   # vi /etc/hosts
+  # 52.56.250.29 is the public IP of this machine, replace with yours. Also check that /etc/nsswitch has priority set to files and not dns.
   127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
   ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
   52.56.250.29 kylo.calvinh.thinkbiganalytics.com kylo

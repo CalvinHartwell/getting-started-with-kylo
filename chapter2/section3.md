@@ -69,7 +69,7 @@ drwxr-xr-x. 8 root root 225 Jun  9 20:14 setup
 
 ```
 
-The install-rpm, install-tar and install-debian directories each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previous and can be found in this directory in the current version of the project:
+The install-rpm, install-tar and install-debian directories each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previously. Once the project has been compiled, the RPM can be found in the following directory within the source code: 
 
 ```
 [root@kylo-release noarch]# ll /home/ec2-user/kylo/install/install-rpm/target/rpm/kylo/RPMS/noarch

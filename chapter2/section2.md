@@ -104,3 +104,7 @@ Once you've selected your services, hit next. The next page allows you to assign
 The next screen allows us to sign slaves for various services. As we are just running everything on one machine, hit next:
 
 ![Local Image](/images/hdp-ambari-assign-masters.PNG)
+
+On the next screen, we customize services. 
+
+The next

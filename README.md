@@ -3,7 +3,7 @@
 
 # Getting Started With Kylo
 
-A free book which provides an introduction to Kylo and NiFi without going into as much detail as the Kylo manual.
+This is a free book which provides an introduction to Kylo and NiFi without going into as much detail as the Kylo manual.
 
 This guide assumes you have a basic knowledge of *nix systems and are able to use SSH.
 
@@ -14,6 +14,10 @@ The Kylo website can be found here: [https://kylo.io/](https://kylo.io).
 The Kylo documentation can be found here: [https://kylo.io/docs.html](https://kylo.io/docs.html).
 
 The Kylo Source Code can be found here: [https://github.com/Teradata/kylo](https://github.com/Teradata/kylo).
+
+## Gitbook
+
+Read this book on Gitbook here: [https://calvinhartwell.gitbooks.io/getting-started-with-kylo/](https://calvinhartwell.gitbooks.io/getting-started-with-kylo/).
 
 ## Contributions, Typos, and Errata
 

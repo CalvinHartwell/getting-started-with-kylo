@@ -120,3 +120,7 @@ Fill in each of the missing properties to resolve the final issues. These will m
 Now the services will start to install on the machine, this will take a while, probably about 30-45 minutes.
 
 ![Local Image](/images/ambari-hdp-installing-services.PNG)
+
+After the services are installed, our cluster should be ready for the Kylo installation. If there are any services which haven't started, make sure they are started. Note that these services actually need to be started in a specific order, starting with HDFS. You may see a screen which looks like this after the services installation:
+
+![Local Image](/images/hdp-ambari-services-down.PNG)

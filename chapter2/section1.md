@@ -17,7 +17,7 @@ We will be using AWS to build this test setup. In theory, you can use a physical
 - At least 25 Gigabytes of storage
 - One Network Interface with a public IP address attached*
 
-&ast; Note: I have tried several times to deploy a subset of all services onto one machine using less resources, but I've had no luck. Using a machine with 8 Gigabytes of ram and 2 vCPU/Cores, the Ambari server crashes during installation and requires a total rebuild every time. It is possible to fix this by installing less services and adjusting the default parameters specific by Ambari (such as Heap size etc). 
+&ast; Note: I have tried several times to deploy a subset of all services onto one machine using less hardware resources, but I've had no luck. Using a machine with 8 Gigabytes of ram and 2 vCPU/Cores, the Ambari server crashes during installation and requires a total rebuild every time. It is possible to fix this by installing less services and adjusting the default parameters specific set by Ambari (such as Heap size etc). Although the HDP sandbox runs with less resources, a lot of the services on the sandbox are in maintenance mode, which means they don't consume many resources, hence why it works on a smaller virtual machine.
 
 &ast; The use of a public IP address is dangerous as it exposes the machine to the whole of the web. If we open up the port to Ambari Depending on your VPC setup, you might not want to do this at all as it could expose your company's internal network to the internet (for example, if you're using AWS Direct Connect). Preferably the use of a VPN would be better: [Amazon VPN Connections](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpn-connections.html).
 
@@ -103,6 +103,7 @@ We will also change the hostname:
   hostnamectl set-hostname --static kylo.cat-lover-extreme.com &&
   hostnamectl set-hostname kylo.cat-lover-extreme.com
 ```
+&ast; Note: You don't have to change the hostname for your machine if you don't want to. When you provision a machine on AWS it is automatically given an AWS hostname which is configured with both forward/reverse DNS entries by default. If you wish to use this hostname, make a note of it by typing: hostname -f on your terminal.
 
 This change in hostname can be verified using the command:
 
@@ -124,14 +125,14 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
 
 &ast; Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
 
-&ast; If you change your hostname to something different to the one Amazon gives you when you provision your machine, you will most likely need to edit your host file unless you have DNS servers available. In theory you can use Route53, existing organisational DNS servers or set up your own using something like Bind. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com) and I just edited the /etc/hosts file to add an entry:
+&ast; If you change your hostname to something different to the one Amazon gives you when you provision your machine, you will most likely need to edit your host file unless you have DNS servers available. In theory you can use Route53, existing organisational DNS servers or set up your own using something like Bind. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com) and I just edited the /etc/hosts file to add an entry for my private IP address: 
 
 ```
   # vi /etc/hosts
-  # 52.56.250.29 is the public IP of this machine, replace with yours. Also check that /etc/nsswitch has priority set to files and not dns.
+  # 172.31.13.60 is the private IP of this machine, replace with yours. Also check that /etc/nsswitch has priority set to files and not dns.
   127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
   ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-  52.56.250.29 kylo.calvinh.thinkbiganalytics.com kylo
+  172.31.13.60 kylo.cat-lover-extreme.com kylo
 ```
 
 Finally, we've just updated the server and it is quite likely the kernel has been updated, so we should reboot for it to take affect, so we run the command:

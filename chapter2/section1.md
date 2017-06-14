@@ -31,7 +31,7 @@ We will be using AWS to build this test setup. In theory, you can use a physical
 
 ![Local Image](/images/rhel-ami.png)
 
-- On the next screen, select the instance type. I used t2.large, which has two vCPU and 8 GiB of memory. Using the t2.medium instance would also suffice.
+- On the next screen, select the instance type. I used t2.xlarge, which has four vCPU and 16 GiB of memory. Using the t2.large instance may also suffice if you reduce the amount of services you are running. 
 
 ![Local Image](/images/ec2-instance-size.png)
 
@@ -125,7 +125,7 @@ Let's also install wget to make it simpler to download stuff. CURL can also be u
 
 &ast; Note: By default, Firewalld and Iptables seem to be disabled, so we don't need to worry about opening ports. However, SELinux is enabled.
 
-&ast; If you change your hostname to something different to the one Amazon gives you when you provision your machine, you will most likely need to edit your host file unless you have DNS servers available. In theory you can use Route53, existing organisational DNS servers or set up your own using something like Bind. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com) and I just edited the /etc/hosts file to add an entry for my private IP address: 
+&ast; If you change your hostname to something different to the one Amazon gives you when you provision your machine, you will most likely need to edit your host file unless you have DNS servers available. In theory you can use Route53, existing organisational DNS servers or set up your own using something like Bind. My machine's hostname is (kylo.calvinh.thinkbiganalytics.com) and I just edited the /etc/hosts file to add an entry for my private IP address:
 
 ```
   # vi /etc/hosts

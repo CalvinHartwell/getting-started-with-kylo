@@ -125,4 +125,4 @@ After the services are installed, our cluster should be ready for the Kylo insta
 
 ![Local Image](/images/hdp-ambari-services-down.PNG)
 
-In order to solve this issue, use the Actions button in the bottom left and hit the Start All button to cause Ambari to start all of its services. You may find that certain services have individual issues, like connectivity or misconfiguration. As long as HDFS and Spark are available, we should be OK to proceed with using Kylo and NiFi. 
+In order to solve this issue, use the Actions button in the bottom left and hit the Start All button to cause Ambari to start all of its services. If you click on specific services, you can start them individually. If you find your cluster is resource constrained, 

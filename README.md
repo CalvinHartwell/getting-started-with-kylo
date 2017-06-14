@@ -11,7 +11,7 @@ The book also includes some basic AWS and Hadoop (HDP from Horton Works).
 
 Read this book on Gitbook here: [https://calvinhartwell.gitbooks.io/getting-started-with-kylo/](https://calvinhartwell.gitbooks.io/getting-started-with-kylo/).
 
-Download this book in [PDF Format](https://www.gitbook.com/download/pdf/book/calvinhartwell/getting-started-with-kylo), [Mobi Format](https://www.gitbook.com/download/mobi/book/calvinhartwell/getting-started-with-kylo) and [ePub Format](https://www.gitbook.com/download/epub/book/calvinhartwell/getting-started-with-kylo).
+This this book can be downloaded in [PDF Format](https://www.gitbook.com/download/pdf/book/calvinhartwell/getting-started-with-kylo), [Mobi Format](https://www.gitbook.com/download/mobi/book/calvinhartwell/getting-started-with-kylo) and [ePub Format](https://www.gitbook.com/download/epub/book/calvinhartwell/getting-started-with-kylo).
 
 The Kylo website can be found here: [https://kylo.io/](https://kylo.io).
 

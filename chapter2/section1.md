@@ -31,7 +31,7 @@ We will be using AWS to build this test setup. In theory, you can use a physical
 
 ![Local Image](/images/rhel-ami.png)
 
-- On the next screen, select the instance type. I used t2.xlarge, which has four vCPU and 16 GiB of memory. Using the t2.large instance may also suffice if you reduce the amount of services you are running. 
+- On the next screen, select the instance type. I used t2.xlarge, which has four vCPU and 16 GiB of memory. Using the t2.large instance may also suffice if you reduce the amount of services you are running.
 
 ![Local Image](/images/ec2-instance-size.png)
 

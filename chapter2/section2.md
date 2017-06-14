@@ -93,7 +93,7 @@ Eventually you will see a screen like this, just hit next when possible to choos
 
 ![Local Image](/images/hdp-ambari-registered.PNG)
 
-In theory you can install every available service, but I decided to opt for: HDFS, YARN + MapReduce2, Tez, Hive, HBase, Pig, Sqoop, Oozie, ZooKeeper, Flume, Ambari Infra, Ambari Metrics, Kafka, SmartSense, Spark, Spark2, Slider. Hit next when you've finished making your choices. Unfortunately we will not cover what every services does in Hadoop in the course of this book:
+In theory you can install every available service, but I decided to opt for: HDFS, YARN + MapReduce2, Tez, Hive, HBase, Pig, Oozie, ZooKeeper, Ambari Infra, Ambari Metrics, SmartSense, Spark, Spark2, Slider. Hit next when you've finished making your choices. Unfortunately we will not cover what every services does in Hadoop in the course of this book:
 
 ![Local Image](/images/hdp-ambari-services.PNG)
 
@@ -124,3 +124,5 @@ Now the services will start to install on the machine, this will take a while, p
 After the services are installed, our cluster should be ready for the Kylo installation. If there are any services which haven't started, make sure they are started. Note that these services actually need to be started in a specific order, starting with HDFS. You may see a screen which looks like this after the services installation:
 
 ![Local Image](/images/hdp-ambari-services-down.PNG)
+
+In order to solve this issue, use the Actions button in the bottom left and hit the Start All button to cause Ambari to start all of its services. You may find that certain services have individual issues, like connectivity or misconfiguration. As long as HDFS and Spark are available, we should be OK to proceed with using Kylo and NiFi. 

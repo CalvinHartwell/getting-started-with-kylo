@@ -10,7 +10,7 @@ The Kylo RPM can be obtained from the Kylo.io website. Generally the latest RPM 
 
 &ast; Note: Hopefully in the future these packages will served through an official yum repository with signed GPG keys for added security.
 
-Finally,
+We first download the Kylo RPM to our server:
 
 ## Building Kylo from Source
 
@@ -69,7 +69,7 @@ drwxr-xr-x. 8 root root 225 Jun  9 20:14 setup
 
 ```
 
-The install-rpm, install-tar and install-debian directories each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previously. Once the project has been compiled, the RPM can be found in the following directory within the source code: 
+The install-rpm, install-tar and install-debian directories each house the respective packages and tar payload for Kylo. The RPM can be installed using the steps mentioned previously. Once the project has been compiled, the RPM can be found in the following directory within the source code:
 
 ```
 [root@kylo-release noarch]# ll /home/ec2-user/kylo/install/install-rpm/target/rpm/kylo/RPMS/noarch

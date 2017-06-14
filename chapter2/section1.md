@@ -12,12 +12,12 @@ This section covers the installation of Kylo, NiFI and HDP on a new machine to f
 
 We will be using AWS to build this test setup. In theory, you can use a physical server, another cloud provider, or even Virtual Box/KVM/Xen/etc to build the machine as well. Here are the requirements for the machine:
 
-- At least 8 GB of RAM
-- At least 2 Cores (Physical or Virtual)
+- At least 16 GB of RAM
+- At least 4 Cores (Physical or Virtual)
 - At least 25 Gigabytes of storage
 - One Network Interface with a public IP address attached*
 
-Note that the machine can be made to work with less resources but the recommendations here will work well.
+&ast; Note: I have tried several times to deploy a subset of all services onto one machine using less resources, but I've had no luck. Using a machine with 8 Gigabytes of ram and 2 vCPU/Cores, the Ambari server crashes during installation and requires a total rebuild every time. It is possible to fix this by installing less services and adjusting the default parameters specific by Ambari (such as Heap size etc). 
 
 &ast; The use of a public IP address is dangerous as it exposes the machine to the whole of the web. If we open up the port to Ambari Depending on your VPC setup, you might not want to do this at all as it could expose your company's internal network to the internet (for example, if you're using AWS Direct Connect). Preferably the use of a VPN would be better: [Amazon VPN Connections](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpn-connections.html).
 

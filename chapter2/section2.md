@@ -93,7 +93,7 @@ Eventually you will see a screen like this, just hit next when possible to choos
 
 ![Local Image](/images/hdp-ambari-registered.PNG)
 
-In theory you can install every available service, but I decided to opt for: HDFS, YARN + MapReduce2, Tez, Hive, HBase, Pig, Oozie, ZooKeeper, Ambari Infra, Ambari Metrics, SmartSense, Spark, Spark2, Slider. Hit next when you've finished making your choices. Unfortunately we will not cover what every services does in Hadoop in the course of this book:
+In theory you can install every available service, but I decided to opt for: HDFS, YARN + MapReduce2, Tez, Hive, HBase, Pig, Oozie, ZooKeeper, Ambari Infra, Ambari Metrics, SmartSense, Spark, Spark2, Slider. Hit next when you've finished making your choices:
 
 ![Local Image](/images/hdp-ambari-services.PNG)
 
@@ -105,9 +105,7 @@ The next screen allows us to sign slaves for various services. As we are just ru
 
 ![Local Image](/images/hdp-assign-slaves.PNG)
 
-On the next screen, we customize services. The services which have the red box next to them mean there is some remaining configuration required to configure the service. This will vary depending on which services you selected, but for this installation, we need to fix Hive, Oozie, Ambari Metrics and SmartSense:
-
-![Local Image](/images/hdp-ambari-assign-masters.PNG)
+On the next screen, we customize services. The services which have the red box next to them mean there is some remaining configuration required to configure the service. This will vary depending on which services you selected, but for this installation, we need to fix Hive, Oozie, Ambari Metrics and SmartSense.
 
 At the bottom of the page you can hit the option 'show me properties with issues' which will automatically take you to the properties for each service which have outstanding problems. The other way to find the properties is to click each of the different individual services and click through to find the missing or troublesome properties:
 
@@ -131,6 +129,6 @@ In order to solve this issue, use the Actions button in the bottom left and hit 
 
 Depending on your cluster size, you may have trouble starting lots of services at once. Services you don't need can be put into maintenance mode to save on resources (ram, processing power).
 
-If you're using a bigger machine (as per my suggestion) or multiple machines, you should hopefully have a screen which looks like this and we can now proceed with the Kylo installation: 
+If you're using a bigger machine (as per my suggestion) or multiple machines, you should hopefully have a screen which looks like this and we can now proceed with the Kylo installation:
 
 ![Local Image](/images/hdp-ambari-all-services-running.PNG)

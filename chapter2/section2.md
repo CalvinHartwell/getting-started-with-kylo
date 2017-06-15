@@ -121,8 +121,16 @@ Now the services will start to install on the machine, this will take a while, p
 
 ![Local Image](/images/ambari-hdp-installing-services.PNG)
 
-After the services are installed, our cluster should be ready for the Kylo installation. If there are any services which haven't started, make sure they are started. Note that these services actually need to be started in a specific order, starting with HDFS. You may see a screen which looks like this after the services installation:
+After the services are installed, our cluster should be ready for the Kylo installation. If there are any services which haven't started, make sure they are started. Note that these services actually need to be started in a specific order, starting with HDFS.
+
+You may see a screen which looks like this after the services installation:
 
 ![Local Image](/images/hdp-ambari-services-down.PNG)
 
-In order to solve this issue, use the Actions button in the bottom left and hit the Start All button to cause Ambari to start all of its services. If you click on specific services, you can start them individually. If you find your cluster is resource constrained, 
+In order to solve this issue, use the Actions button in the bottom left and hit the Start All button to cause Ambari to start all of its services. If you click on specific services, you can start them individually.
+
+Depending on your cluster size, you may have trouble starting lots of services at once. Services you don't need can be put into maintenance mode to save on resources (ram, processing power).
+
+If you're using a bigger machine (as per my suggestion) or multiple machines, you should hopefully have a screen which looks like this and we can now proceed with the Kylo installation: 
+
+![Local Image](/images/hdp-ambari-all-services-running.PNG)

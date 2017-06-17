@@ -12,6 +12,61 @@ The Kylo RPM can be obtained from the Kylo.io website. Generally the latest RPM 
 
 We first download the Kylo RPM to our server:
 
+```
+  # download kylo
+  wget http://bit.ly/2r4P47A -O kylo-0.8.1-1.noarch.rpm
+```
+
+Unfortunately right now The Kylo RPM does not setup groups and users during the RPM installation as not every service has to run on the same machine. So, lets create the users and groups.
+
+To create individual users, run the following commands on the appropriate machines:
+
+```
+  useradd -U -r -m -s /bin/bash nifi
+  useradd -U -r -m -s /bin/bash kylo
+  useradd -U -r -m -s /bin/bash activemq
+```
+
+The following command can be used to confirm if the user and group creation was successful:
+
+```
+  grep 'nifi\|kylo\|activemq' /etc/group /etc/passwd
+```
+
+This command should give two results per user, one for the user in /etc/passwd and one in /etc/group. For example, if you added all the users to an individual machine, there should be six lines of output. If you just added an individual user, there will be two lines of output.
+
+If the groups are missing, they can be added individually:
+
+```
+   groupadd -f kylo
+   groupadd -f nifi
+   groupadd -f activemq
+```
+
+If all groups are missing, they can be all added with the following command:
+
+```
+  groupadd -f kylo && groupadd -f nifi && groupadd -f activemq
+```
+
+Next, we install the Kylo RPM:
+
+```
+  # install the kylo RPM
+  yum install -y kylo-0.8.1-1.noarch.rpm
+```
+
+In order to setup Kylo, we need to setup a database using either MySQL or PostgreSQL. 
+
+
+The package would have created the /opt/kylo directory. This is the main directory for the Kylo application. Go to /opt/kylo/setup/ and run the setup-wizard.sh script:
+
+```
+  #
+  cd /opt/kylo/setup
+  ./setup-wizard.sh
+```
+
 ## Building Kylo from Source
 
 The Kylo package can be built from source using Maven. It is also possible to build Kylo using Maven with an IDE such as Intellij or Eclipse. For the purposes of this short book, we will build the RPM using Maven based on the job schedule run by Jenkins.
